@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.myDIV
+{
+  padding: 15px 32px;
+  color: white;
+  text-align: center;
+  background-color: mediumseagreen;
+  margin-top: 20px;
+  border: none;
+}
+.sidenav {
+  height: 100%;
+  width: 380px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color:white;
+ 
+}
+
+.sidenav a {
+  padding: 10px 10px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+
+.border1
+{
+
+  border: 4px dotted green;
+  margin-top: 500px;
+  height: 220px;
+  width: 1500px;
+
+}
+.moneybutton {
+  background-color: lightgray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Choose your box</h2>
+<p id = "green"></p>
+<button onclick="myFunction1()" id = "myDIV1" class = "myDIV">A</button>
+<button onclick="myFunction2()" id = "myDIV2" class = "myDIV">B</button>
+<button onclick="myFunction3()" id = "myDIV3" class = "myDIV">C</button>
+<button onclick="myFunction4()" id = "myDIV4" class = "myDIV">D</button>
+<button onclick="myFunction5()" id = "myDIV5" class = "myDIV">E</button>
+
+
+
+<script>
+
+let x;
+let y;
+let z;
+var a;
+var bor1;
+var bor2;
+var bor3;
+var bor4;
+var bor5;
+var b =[];
+var destarr =[];
+function sufflenum()
+{
+document.getElementById("myDIV1").innerHTML = x;
+}
+
+
+function myFunction1() {
+bor2 = document.getElementById("showmyDIV2");
+bor3 = document.getElementById("showmyDIV3");
+bor5 = document.getElementById("showmyDIV5");
+bor4 = document.getElementById("showmyDIV4");
+ a = document.getElementById("myDIV1");
+ 
+if(bor2.style.display!="block"&&bor3.style.display!="block"&&bor4.style.display!="block"&&bor5.style.display!="block")
+{
+
+   a = document.getElementById("myDIV1");
+   
+  a.style.display ="none";
+  
+   bor1 = document.getElementById("showmyDIV1");
+  if (bor1.style.display === "none") {
+    bor1.style.display = "block";
+  }
+  
+}
+else
+  {
+    a.innerHTML = destarr[0];
+  }
+}
+<!--
+function myFunction2() {
+ bor1 = document.getElementById("showmyDIV1");
+ bor3 = document.getElementById("showmyDIV3");
+ bor5 =  document.getElementById("showmyDIV5");
+  bor4 =  document.getElementById("showmyDIV4");
+ b = document.getElementById("myDIV2");
+if(bor1.style.display!="block"&&bor3.style.display!="block"&&bor4.style.display!="block"&&bor5.style.display!="block")
+{
+   b = document.getElementById("myDIV2");
+ 
+ b.style.display ="none";
+   bor2 = document.getElementById("showmyDIV2");
+  if (bor2.style.display === "none") {
+    bor2.style.display = "block";
+}	
+  }
+  else
+  {
+    b.innerHTML = destarr[1];
+  }
+}
+
+function myFunction3() {
+ bor1 = document.getElementById("showmyDIV1");
+  bor2 = document.getElementById("showmyDIV2");
+  bor4 = document.getElementById("showmyDIV4");
+  bor5 = document.getElementById("showmyDIV5");
+ b = document.getElementById("myDIV2");
+   c = document.getElementById("myDIV3");
+if(bor1.style.display!="block"&&bor2.style.display!="block"&&bor4.style.display!="block"&&bor5.style.display!="block")
+{
+   c = document.getElementById("myDIV3");
+ 
+ c.style.display ="none";
+   bor3 = document.getElementById("showmyDIV3");
+  if (bor3.style.display === "none") {
+    bor3.style.display = "block";
+}	
+  }
+  else
+  {
+    c.innerHTML = destarr[2];
+  }
+}
+function myFunction4() {
+ bor1 = document.getElementById("showmyDIV1");
+  bor2 = document.getElementById("showmyDIV2");
+    bor3 = document.getElementById("showmyDIV3");
+	bor5 = document.getElementById("showmyDIV5");
+ b = document.getElementById("myDIV2");
+   c = document.getElementById("myDIV3");
+      d=  document.getElementById("myDIV4");
+if(bor1.style.display!="block"&&bor2.style.display!="block"&&bor3.style.display!="block"&&bor5.style.display!="block")
+{
+   d = document.getElementById("myDIV4");
+ 
+ d.style.display ="none";
+   bor4 = document.getElementById("showmyDIV4");
+  if (bor4.style.display === "none") {
+    bor4.style.display = "block";
+}	
+  }
+  else
+  {
+    d.innerHTML = destarr[3];
+  }
+}
+
+function myFunction5() {
+ bor1 = document.getElementById("showmyDIV1");
+  bor2 = document.getElementById("showmyDIV2");
+    bor3 = document.getElementById("showmyDIV3");
+	bor4 = document.getElementById("showmyDIV4");
+	var amount1 = document.getElementById("1000");
+	var amount2 = document.getElementById("2000");
+	 var amount3 = document.getElementById("3000");
+	  var amount4 = document.getElementById("4000");
+	  var amount5 = document.getElementById("5000");
+	   var am1 = amount1.innerHTML;
+	  	 var am2 = amount2.innerHTML;
+	 var am3 = amount3.innerHTML;
+	 var am4 = amount4.innerHTML;
+	  var am5 = amount5.innerHTML;
+	 alert(am3);
+ b = document.getElementById("myDIV2");
+   c = document.getElementById("myDIV3");
+   d=  document.getElementById("myDIV4");
+   e =  document.getElementById("myDIV5");
+if(bor1.style.display!="block"&&bor2.style.display!="block"&&bor3.style.display!="block"&&bor4.style.display!="block")
+{
+   e = document.getElementById("myDIV5");
+ 
+ e.style.display ="none";
+   bor5 = document.getElementById("showmyDIV5");
+  if (bor5.style.display === "none") {
+    bor5.style.display = "block";
+}	
+  }
+  else
+  {
+ 
+   
+	e.innerHTML = destarr[4];
+	
+      if(e.innerHTML===am1)
+  {
+  alert("am1")
+  //amount5.disabled = true;
+    amount1.style.backgroundColor="grey";
+  amount1.style.color="black";
+  }
+   else if(e.innerHTML===am2)
+  {
+  alert("am2");
+  amount2.style.backgroundColor="grey";
+  amount2.style.color="black";
+  amount2.disabled = true;
+  }
+   else if(e.innerHTML===am3)
+  {
+  alert("am3");
+  amount3.style.backgroundColor="grey";
+  amount3.style.color="black";
+  amount3.disabled = true;
+  }
+  else if(e.innerHTML===am4)
+  {
+  alert("am4")
+  amount4.disabled = true;
+    amount4.style.backgroundColor="grey";
+  amount4.style.color="black";
+  }
+    else if(e.innerHTML===am5)
+  {
+  alert("am5")
+  //amount5.disabled = true;
+    amount5.style.backgroundColor="grey";
+  amount5.style.color="black";
+  }
+ 
+  else
+  {
+  alert("different");
+  }
+  
+ }
+
+}
+
+
+-->
+function rannum()
+{
+var arr = [1000,2000,3000,4000,5000];
+
+while(destarr.length < 5){
+    var r = Math.floor(Math.random() * 5);
+	console.log(r);
+    if(destarr.indexOf(arr[r]) === -1) 
+		destarr.push(arr[r]);
+		
+		
+}
+alert(destarr[0]);
+}
+</script>
+
+<div class="sidenav">
+ <p>Generate Money Box</p>
+ <button onclick="rannum()" style = "border:none;background-color: orange;padding: 15px 32px;margin: 10px;">Money</button>
+<br><br>
+ <button class="moneybutton"id = "1000">1000</button>
+ <br>
+  <button class="moneybutton" id = "2000">2000</button> <br>
+ <button class="moneybutton" id = "3000">3000</button> <br>
+  <button class="moneybutton" id = "4000">4000</button> <br>
+    <button class="moneybutton" id = "5000">5000</button>
+
+
+</div>
+<div class ="border1">
+<p> Your chosen box</p>
+<button id = "showmyDIV1" class = "myDIV" style ="display:none">A</button>
+<button id = "showmyDIV2" class = "myDIV" style ="display:none">B</button>
+<button id = "showmyDIV3" class = "myDIV" style ="display:none">C</button>
+<button id = "showmyDIV4" class = "myDIV" style ="display:none">D</button>
+<button id = "showmyDIV5" class = "myDIV" style ="display:none">E</button>
+
+</div>
+
+</body>
+</html>
+
