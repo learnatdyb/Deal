@@ -39,26 +39,44 @@
 .border1
 {
 
-  border: 4px dotted green;
-  margin-top: 500px;
+  border: 4px dashed green;
+  margin-top: 200px;
   height: 220px;
-  width: 1500px;
+  width: 1000px;
 
 }
 .moneybutton {
   background-color: lightgray;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: black;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+ text-align: right;
+  font-size: 11px;
+  
   cursor: pointer;
-  margin: 10px;
+  margin: 5px;
   font-weight:bold;
+  width: 120px;
 }
+
+
+.moneybuttongold {
+  background-color: gold;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+ text-align: right;
+  font-size: 11px;
+  
+  cursor: pointer;
+  margin: 5px;
+  font-weight:bold;
+  width: 120px;
+
 </style>
 </head>
 <body>
@@ -286,15 +304,55 @@ alert(destarr[0]);
 </script>
 
 <div class="sidenav">
- <p>Generate Money Box</p>
- <button onclick="rannum()" style = "border:none;background-color: orange;padding: 15px 32px;margin: 10px;">Money</button>
+<!-- Assigning money to the "choose your box" module-->
+ <button onclick="rannum()" style = "border:none;background-color: orange;padding: 15px 32px;margin: 10px;">Start Game</button>
 <br><br>
- <button class="moneybutton"id = "1000">1000</button>
- <br>
-  <button class="moneybutton" id = "2000">2000</button> <br>
- <button class="moneybutton" id = "3000">3000</button> <br>
-  <button class="moneybutton" id = "4000">4000</button> <br>
-    <button class="moneybutton" id = "5000">5000</button>
+ <button class="moneybutton"id = "1">1</button>
+  <button class="moneybuttongold" id = "5000">5000</button> <br>
+  
+  
+  <button class="moneybutton" id = "5">5</button>  
+    <button class="moneybuttongold" id = "5000">10,000</button> <br>
+   
+ <button class="moneybutton" id = "10">10</button> 
+    <button class="moneybuttongold" id = "5000">25,000</button> <br>
+ 
+  <button class="moneybutton" id = "25">25</button> 
+    <button class="moneybuttongold" id = "5000">50,000</button> <br>
+	
+	
+    <button class="moneybutton" id = "50">50</button>
+	      <button class="moneybuttongold" id = "5000">1,00,000</button> <br>
+	
+	
+	
+	  <button class="moneybutton" id = "75">75</button>
+	   <button class="moneybuttongold" id = "5000">2,00,000</button> <br>
+	  
+	  
+	   <button class="moneybutton" id = "100">100</button>
+	      	   <button class="moneybuttongold" id = "5000">3,00,000</button> <br>
+	   
+	   
+	   <button class="moneybutton" id = "200">200</button>
+	      <button class="moneybuttongold" id = "5000">4,00,000</button> <br>
+	   
+	   
+	   
+		 <button class="moneybutton" id = "300">300</button>
+		    <button class="moneybuttongold" id = "5000">5,00,000</button> <br>
+		 
+		 
+		  <button class="moneybutton" id = "400">400</button>
+		    <button class="moneybuttongold" id = "5000">10,00,000</button> <br>
+		  
+		    <button class="moneybutton" id = "500">500</button>
+			<button class="moneybuttongold" id = "5000">25,00,000</button> <br>
+			
+			
+			  <button class="moneybutton" id = "1000">1000</button>
+			  	<button class="moneybuttongold" id = "5000">50,00,000</button> 
+	
 
 
 </div>
